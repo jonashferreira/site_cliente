@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodrigues Mac Dowell Gasparian - Advogados</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Fontes Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,23 +28,37 @@
                 </div>
             </a>
 
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">HOME</a></li>
-                    <li><a href="#escritorio" class="nav-link">O ESCRITÓRIO</a></li>
-                    <li><a href="#areas" class="nav-link">ÁREA DE ATUAÇÃO</a></li>
-                    <li><a href="#equipe" class="nav-link">QUEM SOMOS</a></li>
-                    <li><a href="#noticias" class="nav-link">PUBLICAÇÕES E NOTÍCIAS</a></li>
-                    <li><a href="#contato" class="nav-link">CONTATO</a></li>
-                </ul>
-            </nav>
-
+            <!-- Botões da direita (Busca + Hambúrguer) -->
             <div class="header-actions">
                 <button class="search-btn" id="search-btn" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- OVERLAY DE FUNDO ESCURO AO ABRIR O MENU -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- PAINEL MENU LATERAL (SLIDE DRAWER) -->
+    <aside class="side-drawer" id="side-drawer">
+        <div class="drawer-header">
+            <button class="drawer-close" id="drawer-close" aria-label="Fechar Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">HOME</a></li>
+                <li><a href="#escritorio" class="nav-link">O ESCRITÓRIO</a></li>
+                <li><a href="#areas" class="nav-link">ÁREA DE ATUAÇÃO</a></li>
+                <li><a href="#equipe" class="nav-link">QUEM SOMOS</a></li>
+                <li><a href="#noticias" class="nav-link">PUBLICAÇÕES E NOTÍCIAS</a></li>
+                <li><a href="#contato" class="nav-link">CONTATO</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <!-- SEÇÃO HERO / SLIDER -->
     <section id="home" class="hero">
@@ -251,7 +265,7 @@
                     <span class="news-date">31.08.26</span>
                     <h3>Entrevista da sócia Tais Gasparian a respeito da Liberdade de imprensa e processos contra jornalistas</h3>
                     <p>O recente e rumoroso caso do jornalista Rubens Valente, condenado a pagar mais de 300 mil reais, reacendeu o debate sobre os riscos jurídicos a que estão submetidos veículos de imprensa...</p>
-                    <a href="#article-1" class="read-more-btn" onclick="openArticleModal(event)">LEIA MAIS <i class="fas fa-chevron-right"></i></a>
+                    <a href="#" class="read-more-btn">LEIA MAIS <i class="fas fa-chevron-right"></i></a>
                 </article>
 
                 <!-- Notícia 2 -->
@@ -369,11 +383,11 @@
                 <a href="#">POLÍTICA DE PRIVACIDADE</a>
             </div>
             <div class="copyright">
-                <p>Muraro Lembi Advogados todos os direitos reservados</p>
+                <p>Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

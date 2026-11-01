@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     const totalSlides = slides.length;
-    const autoSlideInterval = 6000; // 6 segundos
+    const autoSlideInterval = 6000;
 
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let slideTimer = setInterval(nextSlide, autoSlideInterval);
 
-    // Pausar banner ao passar o mouse
     const heroSection = document.querySelector('.hero');
     if (heroSection) {
         heroSection.addEventListener('mouseenter', () => clearInterval(slideTimer));
@@ -39,24 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================
-       2. MENU MOBILE TOGGLE
+       2. MENU LATERAL HAMBÚRGUER (SLIDE DRAWER)
        ========================================== */
     const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const drawerClose = document.getElementById('drawer-close');
+    const sideDrawer = document.getElementById('side-drawer');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
+    function openMenu() {
+        sideDrawer.classList.add('open');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
+
+    function closeMenu() {
+        sideDrawer.classList.remove('open');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', openMenu);
+    }
+
+    if (drawerClose) {
+        drawerClose.addEventListener('click', closeMenu);
+    }
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', closeMenu);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 
     /* ==========================================
        3. INTERATIVIDADE - ÁREAS DE ATUAÇÃO
