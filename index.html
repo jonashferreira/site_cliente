@@ -119,61 +119,66 @@
         </div>
     </section>
 
-    <!-- ÁREAS DE ATUAÇÃO -->
-    <section id="areas" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <div class="hero-title-red small">
-                    <h2>ÁREAS DE ATUAÇÃO</h2>
-                </div>
-            </div>
+   <!-- ÁREAS DE ATUAÇÃO -->
+<section id="areas" class="section-padding">
+    <div class="container">
+        <div class="areas-top-bar">
+            <h2 class="areas-main-title">ÁREAS DE ATUAÇÃO</h2>
+            <a href="#contato" class="btn-entre-contato">entre em contato</a>
+        </div>
 
-            <!-- Grid de Áreas -->
-            <div class="areas-grid" id="areas-grid">
-                <div class="area-card" data-area="contencioso">
-                    <h3>Contencioso e Arbitragem</h3>
-                    <p>Atuação em litígios complexos empresariais e cíveis perante Tribunais e Câmaras Arbitrais.</p>
-                </div>
-                <div class="area-card" data-area="contratos">
-                    <h3>Contratos e Desenvolvimento de Projetos</h3>
-                    <p>Elaboração, negociação e estruturação jurídica de operações e negócios.</p>
-                </div>
-                <div class="area-card" data-area="internet">
-                    <h3>Internet e IA</h3>
-                    <p>Assessoria em novas tecnologias, inteligência artificial, proteção de dados e direito digital.</p>
-                </div>
-                <div class="area-card" data-area="consumidor">
-                    <h3>Consumidor</h3>
-                    <p>Consultoria preventiva e contencioso em relações de consumo para grandes empresas.</p>
-                </div>
-                <div class="area-card" data-area="midia">
-                    <h3>Mídia e Comunicação</h3>
-                    <p>Liberdade de imprensa, direito de resposta, redes sociais e veículos de comunicação.</p>
-                </div>
-                <div class="area-card" data-area="societario">
-                    <h3>Societário</h3>
-                    <p>Estruturação de empresas, M&A, governança corporativa e acordos de acionistas.</p>
-                </div>
-                <div class="area-card" data-area="entretenimento">
-                    <h3>Entretenimento e Publicidade</h3>
-                    <p>Direitos autorais, CONAR, regulação publicitária, contratos artísticos e mídia.</p>
-                </div>
-                <div class="area-card" data-area="sucessoes">
-                    <h3>Sucessões e Planejamento Patrimonial</h3>
-                    <p>Estruturação familiar, inventários, holdings e preservação do patrimônio familiar.</p>
-                </div>
+        <!-- Grid com os Cards no Formato do Layout -->
+        <div class="areas-grid" id="areas-grid">
+            <div class="area-card" data-area="contencioso">
+                <span class="card-bar"></span>
+                <h3>Contencioso e Arbitragem</h3>
             </div>
-
-            <!-- Detalhe da Área Selecionada (Dinamismo JS) -->
-            <div id="area-detail" class="area-detail hidden">
-                <button id="back-to-areas" class="btn-back"><i class="fas fa-arrow-left"></i> DE VOLTA ÀS ÁREAS DE ATUAÇÃO</button>
-                <h3 id="area-detail-title">CONTENCIOSO E ARBITRAGEM</h3>
-                <div id="area-detail-content" class="detail-body">
-                    <!-- Preenchido via JavaScript -->
-                </div>
+            <div class="area-card" data-area="contratos">
+                <span class="card-bar"></span>
+                <h3>Contratos e Desenvolvimento de Projetos</h3>
+            </div>
+            <div class="area-card" data-area="consumidor">
+                <span class="card-bar"></span>
+                <h3>Consumidor</h3>
+            </div>
+            <div class="area-card" data-area="entretenimento">
+                <span class="card-bar"></span>
+                <h3>Entretenimento e Publicidade</h3>
+            </div>
+            <div class="area-card" data-area="internet">
+                <span class="card-bar"></span>
+                <h3>Internet e IA</h3>
+            </div>
+            <div class="area-card" data-area="midia">
+                <span class="card-bar"></span>
+                <h3>Mídia e Comunicação</h3>
+            </div>
+            <div class="area-card" data-area="societario">
+                <span class="card-bar"></span>
+                <h3>Societário</h3>
+            </div>
+            <div class="area-card" data-area="sucessoes">
+                <span class="card-bar"></span>
+                <h3>Sucessões e Planejamento Patrimonial</h3>
             </div>
         </div>
-    </section>
+
+        <div class="areas-footer">
+            <a href="#areas" class="btn-all-areas">
+                <span class="plus-box">+</span> CONHEÇA TODAS AS ÁREAS DE ATUAÇÃO
+            </a>
+        </div>
+
+        <!-- Detalhe Expandido da Área Selecionada (Dinamismo JS) -->
+        <div id="area-detail" class="area-detail hidden">
+            <button id="back-to-areas" class="btn-back"><i class="fas fa-arrow-left"></i> DE VOLTA ÀS ÁREAS DE ATUAÇÃO</button>
+            <h3 id="area-detail-title">CONTRATOS E DESENVOLVIMENTO DE PROJETOS</h3>
+            <div id="area-detail-content" class="detail-body">
+                <!-- Conteúdo dinâmico preenchido via script.js -->
+            </div>
+        </div>
+    </div>
+</section> 
 
     <!-- QUEM SOMOS / EQUIPE -->
     <section id="equipe" class="section-padding bg-light">
