@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodrigues Mac Dowell Gasparian - Advogados</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Fontes Google Fonts -->
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Ícones (FontAwesome) -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -17,382 +15,221 @@
     <!-- CABEÇALHO / NAVBAR -->
     <header class="header">
         <div class="container header-container">
-            <a href="#home" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-bars">
-                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                 </div>
                 <div class="logo-text">
-                    <span class="brand-line">RODRIGUES</span>
-                    <span class="brand-line">MAC DOWELL</span>
-                    <span class="brand-line">GASPARIAN</span>
+                    <span>RODRIGUES</span>
+                    <span>MAC DOWELL</span>
+                    <span>GASPARIAN</span>
                 </div>
             </a>
 
-            <!-- Botões da direita (Busca + Hambúrguer) -->
             <div class="header-actions">
-                <button class="search-btn" id="search-btn" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
+                <button class="search-btn" id="search-btn" aria-label="Pesquisar">
+                    <i class="fas fa-search"></i>
+                </button>
                 <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
+
+            <!-- MENU SUSPENSO FLUTUANTE -->
+            <aside class="side-drawer" id="side-drawer">
+                <div class="drawer-header">
+                    <button class="drawer-close" id="drawer-close" aria-label="Fechar Menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">HOME</a></li>
+                        <li><a href="o-escritorio.html" class="nav-link">O ESCRITÓRIO</a></li>
+                        <li><a href="#areas" class="nav-link">ÁREA DE ATUAÇÃO</a></li>
+                        <li><a href="quem-somos.html" class="nav-link">QUEM SOMOS</a></li>
+                        <li><a href="publicacoes.html" class="nav-link">PUBLICAÇÕES E NOTÍCIAS</a></li>
+                        <li><a href="#contato" class="nav-link">CONTATO</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </aside>
         </div>
     </header>
 
-    <!-- OVERLAY DE FUNDO ESCURO AO ABRIR O MENU -->
-    <div class="menu-overlay" id="menu-overlay"></div>
-
-    <!-- PAINEL MENU LATERAL (SLIDE DRAWER) -->
-    <aside class="side-drawer" id="side-drawer">
-        <div class="drawer-header">
-            <button class="drawer-close" id="drawer-close" aria-label="Fechar Menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <nav class="nav-menu">
-            <ul class="nav-list">
-                <li><a href="#home" class="nav-link active">HOME</a></li>
-                <li><a href="#escritorio" class="nav-link">O ESCRITÓRIO</a></li>
-                <li><a href="#areas" class="nav-link">ÁREA DE ATUAÇÃO</a></li>
-                <li><a href="#equipe" class="nav-link">QUEM SOMOS</a></li>
-                <li><a href="#noticias" class="nav-link">PUBLICAÇÕES E NOTÍCIAS</a></li>
-                <li><a href="#contato" class="nav-link">CONTATO</a></li>
-            </ul>
-        </nav>
-    </aside>
-
     <!-- SEÇÃO HERO / SLIDER -->
-    <section id="home" class="hero">
-        <div class="hero-slider">
-            <div class="slide active">
-                <div class="slide-bg slide-bg-1"></div>
-                <div class="hero-overlay">
-                    <div class="hero-box">
-                        <h1>CONTENCIOSO CONDUZIDO COM RIGOR TÉCNICO, VISÃO ESTRATÉGICA E RESPONSABILIDADE</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-bg slide-bg-2"></div>
-                <div class="hero-overlay">
-                    <div class="hero-box">
-                        <h1>ASSESSORIA JURÍDICA DIANTE DAS TRANSFORMAÇÕES DOS NEGÓCIOS, DA TECNOLOGIA E DA COMUNICAÇÃO.</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-bg slide-bg-3"></div>
-                <div class="hero-overlay">
-                    <div class="hero-box">
-                        <h1>ATENDIMENTO PRÓXIMO AO CLIENTE, EXCELÊNCIA TÉCNICA E SOLUÇÕES JURÍDICAS SOFISTICADAS.</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-bg slide-bg-4"></div>
-                <div class="hero-overlay">
-                    <div class="hero-box">
-                        <h1>HÁ MAIS DE 50 ANOS, ASSESSORANDO CLIENTES EM DISPUTAS COMPLEXAS, JUDICIAIS, ARBITRAIS E ADMINISTRATIVAS.</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-controls">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </section>
-
-    <!-- O ESCRITÓRIO -->
-    <section id="escritorio" class="section-padding bg-light">
+    <section id="home" class="hero-wrapper">
         <div class="container">
-            <div class="hero-title-red">
-                <h2>EXPERIÊNCIA JURÍDICA</h2>
-            </div>
-            <div class="about-content">
-                <p class="lead-text">
-                    Diferentes gerações, especialidades e experiências profissionais que marcam os mais de 50 anos de trajetória do escritório. Uma prática jurídica que reúne atuação consultiva em diversas áreas do Direito e contextos empresariais.
-                </p>
-                <a href="#equipe" class="btn-link">+ CONHEÇA OS ADVOGADOS</a>
+            <div class="hero">
+                <div class="hero-slider">
+                    <div class="slide active">
+                        <img src="./img/banner-1.jpg" alt="Arte RMG Advogados" class="slide-img">
+                        <div class="hero-box">
+                            <h1>CONTENCIOSO CONDUZIDO COM RIGOR TÉCNICO, VISÃO ESTRATÉGICA E RESPONSABILIDADE.</h1>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/banner-2.jpg" alt="Assessoria Jurídica" class="slide-img">
+                        <div class="hero-box">
+                            <h1>ASSESSORIA JURÍDICA DIANTE DAS TRANSFORMAÇÕES DOS NEGÓCIOS, DA TECNOLOGIA E DA COMUNICAÇÃO.</h1>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/banner-3.jpg" alt="Atendimento Próximo" class="slide-img">
+                        <div class="hero-box">
+                            <h1>ATENDIMENTO PRÓXIMO AO CLIENTE, EXCELÊNCIA TÉCNICA E SOLUÇÕES JURÍDICAS SOFISTICADAS.</h1>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/banner-4.jpg" alt="Mais de 50 anos" class="slide-img">
+                        <div class="hero-box">
+                            <h1>HÁ MAIS DE 50 ANOS, ASSESSORANDO CLIENTES EM DISPUTAS COMPLEXAS, JUDICIAIS, ARBITRAIS E ADMINISTRATIVAS.</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
         </div>
     </section>
 
-   <!-- ÁREAS DE ATUAÇÃO -->
-<section id="areas" class="section-padding">
-    <div class="container">
-        <div class="areas-top-bar">
-            <h2 class="areas-main-title">ÁREAS DE ATUAÇÃO</h2>
-            <a href="#contato" class="btn-entre-contato">entre em contato</a>
-        </div>
-
-        <!-- Grid com os Cards no Formato do Layout -->
-        <div class="areas-grid" id="areas-grid">
-            <div class="area-card" data-area="contencioso">
-                <span class="card-bar"></span>
-                <h3>Contencioso e Arbitragem</h3>
-            </div>
-            <div class="area-card" data-area="contratos">
-                <span class="card-bar"></span>
-                <h3>Contratos e Desenvolvimento de Projetos</h3>
-            </div>
-            <div class="area-card" data-area="consumidor">
-                <span class="card-bar"></span>
-                <h3>Consumidor</h3>
-            </div>
-            <div class="area-card" data-area="entretenimento">
-                <span class="card-bar"></span>
-                <h3>Entretenimento e Publicidade</h3>
-            </div>
-            <div class="area-card" data-area="internet">
-                <span class="card-bar"></span>
-                <h3>Internet e IA</h3>
-            </div>
-            <div class="area-card" data-area="midia">
-                <span class="card-bar"></span>
-                <h3>Mídia e Comunicação</h3>
-            </div>
-            <div class="area-card" data-area="societario">
-                <span class="card-bar"></span>
-                <h3>Societário</h3>
-            </div>
-            <div class="area-card" data-area="sucessoes">
-                <span class="card-bar"></span>
-                <h3>Sucessões e Planejamento Patrimonial</h3>
-            </div>
-        </div>
-
-        <div class="areas-footer">
-            <a href="#areas" class="btn-all-areas">
-                <span class="plus-box">+</span> CONHEÇA TODAS AS ÁREAS DE ATUAÇÃO
-            </a>
-        </div>
-
-        <!-- Detalhe Expandido da Área Selecionada (Dinamismo JS) -->
-        <div id="area-detail" class="area-detail hidden">
-            <button id="back-to-areas" class="btn-back"><i class="fas fa-arrow-left"></i> DE VOLTA ÀS ÁREAS DE ATUAÇÃO</button>
-            <h3 id="area-detail-title">CONTRATOS E DESENVOLVIMENTO DE PROJETOS</h3>
-            <div id="area-detail-content" class="detail-body">
-                <!-- Conteúdo dinâmico preenchido via script.js -->
-            </div>
-        </div>
-    </div>
-</section> 
-
-    <!-- QUEM SOMOS / EQUIPE -->
-    <section id="equipe" class="section-padding bg-light">
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="areas" class="areas-section">
         <div class="container">
-            <div class="hero-title-red small">
-                <h2>QUEM SOMOS</h2>
+            <div class="areas-top-bar">
+                <h2 class="section-title">ÁREAS DE ATUAÇÃO</h2>
+                <a href="#contato" class="btn-entre-contato">entre em contato</a>
             </div>
 
-            <div class="team-grid">
-                <!-- Samuel Mac Dowell -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <div class="img-placeholder samuel-img"></div>
-                    </div>
-                    <div class="team-info">
-                        <h3>SAMUEL MAC DOWELL DE FIGUEIREDO</h3>
-                        <p>Samuel Mac Dowell de Figueiredo é sócio-fundador do escritório e formado em Direito pela Universidade de São Paulo (USP). É árbitro na Câmara de Arbitragem Brasil-Canadá, com atuação em litígios arbitrais.</p>
-                        <p>Sua prática abrange as áreas contenciosa e consultiva, com foco em Direito Civil, Administrativo, Comercial, Societário, Fusões e Aquisições, Direito Econômico e Concorrencial e Propriedade Intelectual.</p>
-                        <a href="mailto:samuel.figueiredo@rmgadvogados.com.br" class="email-link"><i class="far fa-envelope"></i> SAMUEL.FIGUEIREDO@RMGADVOGADOS.COM.BR</a>
-                    </div>
+            <div class="areas-grid" id="areas-grid">
+                <div class="area-card" data-area="contencioso">
+                    <span class="card-bar"></span>
+                    <h3>Contencioso e<br>Arbitragem</h3>
                 </div>
+                <div class="area-card" data-area="contratos">
+                    <span class="card-bar"></span>
+                    <h3>Contratos e<br>Desenvolvimento<br>de Projetos</h3>
+                </div>
+                <div class="area-card" data-area="consumidor">
+                    <span class="card-bar"></span>
+                    <h3>Consumidor</h3>
+                </div>
+                <div class="area-card" data-area="entretenimento">
+                    <span class="card-bar"></span>
+                    <h3>Entretenimento e<br>Publicidade</h3>
+                </div>
+                <div class="area-card" data-area="internet">
+                    <span class="card-bar"></span>
+                    <h3>Internet e IA</h3>
+                </div>
+                <div class="area-card" data-area="midia">
+                    <span class="card-bar"></span>
+                    <h3>Mídia e<br>Comunicação</h3>
+                </div>
+                <div class="area-card" data-area="societario">
+                    <span class="card-bar"></span>
+                    <h3>Societário</h3>
+                </div>
+                <div class="area-card" data-area="sucessoes">
+                    <span class="card-bar"></span>
+                    <h3>Sucessões e<br>Planejamento<br>Patrimonial</h3>
+                </div>
+            </div>
 
-                <!-- Taís Borja Gasparian -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <div class="img-placeholder tais-img"></div>
-                    </div>
-                    <div class="team-info">
-                        <h3>TAÍS BORJA GASPARIAN</h3>
-                        <p>Taís Borja Gasparian é sócia-fundadora do escritório e formada em Direito e mestre pela Universidade de São Paulo (USP), além de bacharel em Letras pela mesma instituição.</p>
-                        <p>Dedica-se às áreas de Liberdade de Expressão, Imprensa, Internet e Direitos Autorais, com atuação em contencioso cível e perante os Tribunais Superiores. Também participa de iniciativas acadêmicas e institucionais relacionadas à defesa da liberdade de expressão.</p>
-                        <a href="mailto:tais.gasparian@rmgadvogados.com.br" class="email-link"><i class="far fa-envelope"></i> TAIS.GASPARIAN@RMGADVOGADOS.COM.BR</a>
-                    </div>
-                </div>
+            <!-- Detalhe Expandido da Área Selecionada -->
+            <div id="area-detail" class="area-detail hidden">
+                <button id="back-to-areas" class="btn-back"><i class="fas fa-arrow-left"></i> DE VOLTA ÀS ÁREAS DE ATUAÇÃO</button>
+                <h3 id="area-detail-title"></h3>
+                <div id="area-detail-content" class="detail-body"></div>
+            </div>
 
-                <!-- Virginia Veridiana -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <div class="img-placeholder virginia-img"></div>
-                    </div>
-                    <div class="team-info">
-                        <h3>VIRGINIA VERIDIANA BARBOSA GARCIA</h3>
-                        <p>Virginia Veridiana Barbosa Garcia é formada em Direito pela Universidade de São Paulo (USP), com especialização em Direito Contratual pelo Centro de Extensão Universitária de São Paulo e em Direito Processual Civil pela Escola Superior de Advocacia da OAB.</p>
-                        <p>Sócia do escritório, atua nas áreas contenciosa e consultiva, com foco em Direito Civil, Comercial, Administrativo, do Consumidor, Imprensa, Família e Sucessões, Responsabilidade Civil e Previdência Complementar.</p>
-                        <a href="mailto:virginia.garcia@rmgadvogados.com.br" class="email-link"><i class="far fa-envelope"></i> VIRGINIA.GARCIA@RMGADVOGADOS.COM.BR</a>
-                    </div>
-                </div>
-
-                <!-- Mônica Filgueiras -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <div class="img-placeholder monica-img"></div>
-                    </div>
-                    <div class="team-info">
-                        <h3>MÔNICA FILGUEIRAS DA SILVA GALVÃO</h3>
-                        <p>Mônica Filgueiras da Silva Galvão é formada em Direito pela Pontifícia Universidade Católica de São Paulo (PUC-SP).</p>
-                        <p>Sócia do escritório, atua nas áreas contenciosa e consultiva, com foco em Direito Civil, Administrativo, do Consumidor, Imprensa, Internet, Proteção de Dados e Responsabilidade Civil.</p>
-                        <a href="mailto:monica.galvao@rmgadvogados.com.br" class="email-link"><i class="far fa-envelope"></i> MONICA.GALVAO@RMGADVOGADOS.COM.BR</a>
-                    </div>
-                </div>
-
-                <!-- Carolina Arid -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <div class="img-placeholder carolina-img"></div>
-                    </div>
-                    <div class="team-info">
-                        <h3>CAROLINA ARID ROSA BRANDÃO</h3>
-                        <p>Carolina Arid Rosa Brandão é formada em Direito pela Pontifícia Universidade Católica de São Paulo (PUC-SP), onde também se especializou em Direito Contratual.</p>
-                        <p>Sócia do escritório, dedica-se às áreas de Publicidade, Propriedade Intelectual, Mídia e Direito aplicado à Comunicação. É coordenadora da Coordenação de Publicidade e Creators da Comissão de Mídia, Entretenimento e Cultura da OAB São Paulo.</p>
-                        <a href="mailto:carolina.rosa@rmgadvogados.com.br" class="email-link"><i class="far fa-envelope"></i> CAROLINA.ROSA@RMGADVOGADOS.COM.BR</a>
-                    </div>
-                </div>
+            <div class="areas-footer">
+                <a href="#areas" class="btn-plus-red" id="btn-all-areas">
+                    <span class="plus-box">+</span> CONHEÇA TODAS AS ÁREAS DE ATUAÇÃO
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- PUBLICAÇÕES E NOTÍCIAS -->
-    <section id="noticias" class="section-padding">
+    <!-- QUEM SOMOS (FAIXA BEGE NA HOME) -->
+    <section id="quem-somos" class="quem-somos-section">
         <div class="container">
-            <div class="hero-title-red small">
-                <h2>PUBLICAÇÕES E NOTÍCIAS</h2>
-            </div>
-            <p class="subtitle-text">Artigos, análises e notícias sobre temas relevantes para o Direito, os negócios e os setores em que atuamos.</p>
+            <h2 class="section-title">QUEM SOMOS</h2>
 
-            <div class="news-grid">
-                <!-- Notícia 1 -->
-                <article class="news-card">
-                    <span class="news-date">31.08.26</span>
-                    <h3>Entrevista da sócia Tais Gasparian a respeito da Liberdade de imprensa e processos contra jornalistas</h3>
-                    <p>O recente e rumoroso caso do jornalista Rubens Valente, condenado a pagar mais de 300 mil reais, reacendeu o debate sobre os riscos jurídicos a que estão submetidos veículos de imprensa...</p>
-                    <a href="#" class="read-more-btn">LEIA MAIS <i class="fas fa-chevron-right"></i></a>
-                </article>
-
-                <!-- Notícia 2 -->
-                <article class="news-card">
-                    <span class="news-date">29.05.26</span>
-                    <h3>STJ reconhece limites da proteção autoral ao grafite em espaço público: caso TikTok no Beco do Batman</h3>
-                    <p>Análise da recente decisão do Superior Tribunal de Justiça envolvendo direito de imagem, propriedade intelectual e intervenções artísticas urbanas.</p>
-                    <a href="#" class="read-more-btn">+ LEIA MAIS</a>
-                </article>
-
-                <!-- Notícia 3 -->
-                <article class="news-card">
-                    <span class="news-date">31.07.26</span>
-                    <h3>Patrícia Campos Mello ganha ação contra o Ex-Presidente</h3>
-                    <p>Decisão reafirma a defesa da liberdade de imprensa e indenização por ofensas e ataques à honra no exercício da profissão jornalística.</p>
-                    <a href="#" class="read-more-btn">+ LEIA MAIS</a>
-                </article>
-
-                <!-- Notícia 4 -->
-                <article class="news-card">
-                    <span class="news-date">29.03.26</span>
-                    <h3>Juiz condena Hans River a indenizar Patrícia Campos Mello por ofensa sexista</h3>
-                    <p>Mais um desdobramento importante na responsabilização por ofensas contra comunicadores no ambiente de depoimentos e mídias.</p>
-                    <a href="#" class="read-more-btn">+ LEIA MAIS</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="section-padding bg-light">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="hero-title-red small">
-                        <h2>ENTRE EM CONTATO COM NOSSA EQUIPE</h2>
-                    </div>
-                    <div class="info-items">
-                        <p><i class="fas fa-phone-alt"></i> +55 (11) 2344-6672</p>
-                        <p><i class="fas fa-envelope"></i> mail@rmgadvogados.com.br</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Brig. Faria Lima, nº 2894, 12º andar<br>Jardim Paulistano - São Paulo/SP<br>CEP: 01451-000</p>
-                    </div>
+            <div class="quem-somos-grid">
+                <div class="quem-somos-img-wrapper">
+                    <img src="./img/equipe.jpg" alt="Sócios Rodrigues Mac Dowell Gasparian">
+                    <div class="red-bottom-bar"></div>
                 </div>
 
-                <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="nome">nome:</label>
-                            <input type="text" id="nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">e-mail:</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">telefone:</label>
-                            <input type="tel" id="telefone">
-                        </div>
-                        <div class="form-group">
-                            <label for="assunto">assunto:</label>
-                            <input type="text" id="assunto">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensagem">mensagem:</label>
-                            <textarea id="mensagem" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">ENVIAR</button>
-                    </form>
+                <div class="quem-somos-text">
+                    <p>
+                        Diferentes gerações, especialidades e experiências profissionais que marcam os mais de 50 anos de trajetória do escritório. Uma prática jurídica que reúne atuação consultiva em diversas áreas do Direito e contextos empresariais.
+                    </p>
+                    <a href="quem-somos.html" class="btn-plus-red">
+                        <span class="plus-box">+</span> CONHEÇA OS ADVOGADOS
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- NEWSLETTER BAR -->
-    <div class="newsletter-bar">
-        <div class="container newsletter-container">
-            <span class="newsletter-title">RECEBA NOSSA NEWSLETTER</span>
-            <form id="newsletter-form" class="newsletter-form">
-                <input type="email" placeholder="seu e-mail" required>
-                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-            </form>
-        </div>
-    </div>
 
     <!-- RODAPÉ -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-col footer-nav">
-                <a href="#home">HOME</a>
-                <a href="#escritorio">O ESCRITÓRIO</a>
-                <a href="#areas">ÁREA DE ATUAÇÃO</a>
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-links">
+                    <a href="index.html">HOME</a>
+                    <a href="o-escritorio.html">O ESCRITÓRIO</a>
+                    <a href="#areas">ÁREA DE ATUAÇÃO</a>
+                </div>
+                <div class="footer-col footer-links">
+                    <a href="quem-somos.html">QUEM SOMOS</a>
+                    <a href="publicacoes.html">PUBLICAÇÕES E NOTÍCIAS</a>
+                    <a href="#contato">CONTATO</a>
+                </div>
+                <div class="footer-col footer-address">
+                    <p>+55 (11) 2344-6672</p>
+                    <p>mail@rmgadvogados.com.br</p>
+                    <p>Av. Brig. Faria Lima, nº 2894, 12º andar</p>
+                    <p>Jardim Paulistano - São Paulo/SP</p>
+                    <p>CEP: 01451-000</p>
+                </div>
             </div>
-            <div class="footer-col footer-nav">
-                <a href="#equipe">QUEM SOMOS</a>
-                <a href="#noticias">PUBLICAÇÕES E NOTÍCIAS</a>
-                <a href="#contato">CONTATO</a>
+
+            <div class="footer-middle">
+                <span class="copyright">Rodrigues Mac Dowell Gasparian todos os direitos reservados</span>
+                <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
+                <span class="signature-mark">UnixEdge</span>
             </div>
-            <div class="footer-col footer-contact">
-                <p>+55 (11) 2344-6672</p>
-                <p>mail@rmgadvogados.com.br</p>
-                <p>Av. Brig. Faria Lima, nº 2894, 12º andar</p>
-                <p>Jardim Paulistano - São Paulo/SP</p>
-                <p>CEP 01451-000</p>
-            </div>
-            <div class="footer-col footer-social">
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <div class="brand-footer">
-                <strong>RODRIGUES MAC DOWELL GASPARIAN</strong>
-            </div>
-            <div class="legal-links">
-                <a href="#">TERMOS E CONDIÇÕES</a>
-                <a href="#">POLÍTICA DE PRIVACIDADE</a>
-            </div>
-            <div class="copyright">
-                <p>Todos os direitos reservados</p>
-            </div>
+
+            <div class="footer-bottom">
+                <a href="index.html" class="logo footer-logo">
+                    <div class="logo-bars">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="logo-text white-text">
+                        <span>RODRIGUES</span>
+                        <span>MAC DOWELL</span>
+                        <span>GASPARIAN</span>
+                    </div>
+                </a>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>  
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
