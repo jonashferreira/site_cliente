@@ -73,6 +73,30 @@ const PUBLICACOES_DATA = [
         ],
         tags: ["#TaisGasparian", "#Imprensa", "#EstadoDemocráticoDeDireito"]
     }
+    {
+        id: "entrevista-tais-gasparian-3",
+        data: "31.08.26",
+        timestamp: 20260831,
+        resumo: "3 Entrevista da sócia Taís Gasparian a respeito da Liberdade de imprensa e processos contra jornalistas...",
+        titulo: "3 Entrevista da sócia Taís Gasparian a respeito da Liberdade de imprensa e processos contra jornalistas",
+        conteudo: [
+            "3 Participação da sócia Taís Borja Gasparian discutindo o fenômeno do assédio judicial contra comunicadores e os mecanismos institucionais de proteção à liberdade de imprensa no Brasil."
+        ],
+        tags: ["#TaisGasparian", "#Imprensa", "#EstadoDemocráticoDeDireito"]
+    }
+    {
+        id: "entrevista-tais-gasparian-4",
+        data: "31.08.26",
+        timestamp: 20260831,
+        resumo: "4 Entrevista da sócia Taís Gasparian a respeito da Liberdade de imprensa e processos contra jornalistas...",
+        titulo: "4 Entrevista da sócia Taís Gasparian a respeito da Liberdade de imprensa e processos contra jornalistas",
+        conteudo: [
+            "4 Participação da sócia Taís Borja Gasparian discutindo o fenômeno do assédio judicial contra comunicadores e os mecanismos institucionais de proteção à liberdade de imprensa no Brasil."
+        ],
+        tags: ["#TaisGasparian", "#Imprensa", "#EstadoDemocráticoDeDireito"]
+    }
+];
+
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
