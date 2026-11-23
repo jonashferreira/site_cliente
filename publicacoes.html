@@ -60,7 +60,7 @@
         </div>
     </header>
 
-    <!-- VISUALIZAÇÃO 1: LISTAGEM DE PUBLICAÇÕES E NOTÍCIAS -->
+    <!-- VISUALIZAÇÃO PRINCIPAL: LISTAGEM DE PUBLICAÇÕES E NOTÍCIAS -->
     <main id="pub-list-view" class="pub-main">
         
         <!-- CABEÇALHO DA PÁGINA (FAIXA VERMELHA + TEXTOS) -->
@@ -108,30 +108,40 @@
 
     </main>
 
-    <!-- VISUALIZAÇÃO 2: LEITURA COMPLETA DO ARTIGO -->
-    <article id="pub-article-view" class="pub-article-view hidden">
-        <div class="container pub-article-container">
-            <button id="pub-back-btn" class="btn-back-pub">
-                <i class="fas fa-arrow-left"></i> VOLTAR PARA PUBLICAÇÕES E NOTÍCIAS
-            </button>
+    <!-- OVERLAY COM FUNDO DESFOCADO + CARTÃO BRANCO CENTRALIZADO -->
+    <div id="pub-article-view" class="pub-article-modal hidden" role="dialog" aria-modal="true" aria-labelledby="art-title">
+        <div class="art-white-card" id="art-white-card">
+            <!-- Topo do Cartão: Data à esquerda + Botão X preto à direita -->
+            <div class="art-card-header">
+                <span id="art-date" class="art-date">31.08.26</span>
+                <button id="pub-back-btn" class="btn-close-article" aria-label="Fechar notícia">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
 
-            <span id="art-date" class="art-date">31.08.26</span>
-            <h1 id="art-title" class="art-title"></h1>
+            <!-- Conteúdo Recuado do Artigo -->
+            <div class="art-card-content">
+                <h1 id="art-title" class="art-title"></h1>
 
-            <div id="art-body" class="art-body"></div>
+                <div id="art-body" class="art-body"></div>
 
-            <div id="art-tags" class="art-tags"></div>
+                <div id="art-tags" class="art-tags"></div>
 
-            <div class="art-share">
-                <span class="share-label">compartilhar</span>
-                <div class="share-icons">
-                    <a href="#" id="share-linkedin" target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" id="share-whatsapp" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <button id="share-copy" aria-label="Copiar link"><i class="fas fa-link"></i></button>
+                <!-- Botão Preto "compartilhar" + Opções Expansíveis -->
+                <div class="art-share-wrapper">
+                    <button type="button" id="toggle-share-btn" class="btn-share-black">
+                        compartilhar
+                    </button>
+
+                    <div id="share-options" class="share-icons hidden">
+                        <a href="#" id="share-linkedin" target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" id="share-whatsapp" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <button type="button" id="share-copy" aria-label="Copiar link"><i class="fas fa-link"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-    </article>
+    </div>
 
     <!-- RODAPÉ -->
     <footer class="footer">

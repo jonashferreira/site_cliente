@@ -79,9 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("pub-grid");
     const searchInput = document.getElementById("pub-search-input");
     const sortSelect = document.getElementById("pub-sort-select");
-    const listView = document.getElementById("pub-list-view");
-    const articleView = document.getElementById("pub-article-view");
+    const articleModal = document.getElementById("pub-article-view");
+    const whiteCard = document.getElementById("art-white-card");
     const backBtn = document.getElementById("pub-back-btn");
+    const toggleShareBtn = document.getElementById("toggle-share-btn");
+    const shareOptions = document.getElementById("share-options");
 
     if (!grid) return;
 
@@ -131,15 +133,34 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("share-linkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
         document.getElementById("share-whatsapp").href = `https://api.whatsapp.com/send?text=${shareText}%20${currentUrl}`;
 
-        listView.classList.add("hidden");
-        articleView.classList.remove("hidden");
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        if (shareOptions) {
+            shareOptions.classList.add("hidden");
+        }
+
+        articleModal.classList.remove("hidden");
+        articleModal.scrollTop = 0;
+        document.body.classList.add("modal-open");
     }
 
-    backBtn.addEventListener("click", () => {
-        articleView.classList.add("hidden");
-        listView.classList.remove("hidden");
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    function closeArticle() {
+        articleModal.classList.add("hidden");
+        document.body.classList.remove("modal-open");
+    }
+
+    backBtn.addEventListener("click", closeArticle);
+
+    // Fechar ao clicar fora do cartão branco (no fundo desfocado)
+    articleModal.addEventListener("click", (e) => {
+        if (!whiteCard.contains(e.target)) {
+            closeArticle();
+        }
+    });
+
+    // Fechar ao pressionar ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !articleModal.classList.contains("hidden")) {
+            closeArticle();
+        }
     });
 
     function filterAndSort() {
@@ -164,6 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchInput.addEventListener("input", filterAndSort);
     sortSelect.addEventListener("change", filterAndSort);
+
+    if (toggleShareBtn && shareOptions) {
+        toggleShareBtn.addEventListener("click", () => {
+            shareOptions.classList.toggle("hidden");
+        });
+    }
 
     document.getElementById("share-copy").addEventListener("click", () => {
         navigator.clipboard.writeText(window.location.href);
