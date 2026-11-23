@@ -72,7 +72,7 @@ const PUBLICACOES_DATA = [
             "Participação da sócia Taís Borja Gasparian discutindo o fenômeno do assédio judicial contra comunicadores e os mecanismos institucionais de proteção à liberdade de imprensa no Brasil."
         ],
         tags: ["#TaisGasparian", "#Imprensa", "#EstadoDemocráticoDeDireito"]
-    }
+    },
     {
         id: "entrevista-tais-gasparian-3",
         data: "31.08.26",
@@ -83,7 +83,7 @@ const PUBLICACOES_DATA = [
             "3 Participação da sócia Taís Borja Gasparian discutindo o fenômeno do assédio judicial contra comunicadores e os mecanismos institucionais de proteção à liberdade de imprensa no Brasil."
         ],
         tags: ["#TaisGasparian", "#Imprensa", "#EstadoDemocráticoDeDireito"]
-    }
+    },
     {
         id: "entrevista-tais-gasparian-4",
         data: "31.08.26",
@@ -97,10 +97,9 @@ const PUBLICACOES_DATA = [
     }
 ];
 
-];
-
 document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("pub-grid");
+    const paginationContainer = document.getElementById("pub-pagination");
     const searchInput = document.getElementById("pub-search-input");
     const sortSelect = document.getElementById("pub-sort-select");
     const articleModal = document.getElementById("pub-article-view");
@@ -111,13 +110,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!grid) return;
 
-    function renderCards(items) {
-        if (items.length === 0) {
-            grid.innerHTML = `<p style="grid-column: 1/-1; padding: 30px 0; color: #666;">Nenhuma publicação encontrada para o termo pesquisado.</p>`;
+    const ITEMS_PER_PAGE = 6;
+    let currentPage = 1;
+    let currentFilteredItems = [...PUBLICACOES_DATA];
+
+    function renderPagination(totalItems) {
+        if (!paginationContainer) return;
+
+        const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+        if (totalPages <= 1) {
+            paginationContainer.innerHTML = "";
             return;
         }
 
-        grid.innerHTML = items.map(item => `
+        let html = `
+            <button type="button" class="page-btn page-nav" data-page="${currentPage - 1}" ${currentPage === 1 ? "disabled" : ""} aria-label="Página anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        `;
+
+        for (let i = 1; i <= totalPages; i++) {
+            html += `
+                <button type="button" class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">
+                    ${i}
+                </button>
+            `;
+        }
+
+        html += `
+            <button type="button" class="page-btn page-nav" data-page="${currentPage + 1}" ${currentPage === totalPages ? "disabled" : ""} aria-label="Próxima página">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        `;
+
+        paginationContainer.innerHTML = html;
+
+        paginationContainer.querySelectorAll(".page-btn:not([disabled])").forEach(btn => {
+            btn.addEventListener("click", () => {
+                currentPage = parseInt(btn.getAttribute("data-page"), 10);
+                renderCurrentPage();
+                const controlsSection = document.querySelector(".pub-controls-section");
+                if (controlsSection) {
+                    controlsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
+    }
+
+    function renderCurrentPage() {
+        if (currentFilteredItems.length === 0) {
+            grid.innerHTML = `<p style="grid-column: 1/-1; padding: 30px 0; color: #666;">Nenhuma publicação encontrada para o termo pesquisado.</p>`;
+            if (paginationContainer) paginationContainer.innerHTML = "";
+            return;
+        }
+
+        const totalPages = Math.ceil(currentFilteredItems.length / ITEMS_PER_PAGE);
+        if (currentPage > totalPages) currentPage = 1;
+
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const pageItems = currentFilteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+        grid.innerHTML = pageItems.map(item => `
             <article class="pub-card" data-id="${item.id}">
                 <div>
                     <span class="pub-card-date">${item.data}</span>
@@ -136,6 +190,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 openArticle(id);
             });
         });
+
+        renderPagination(currentFilteredItems.length);
     }
 
     function openArticle(id) {
@@ -173,14 +229,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     backBtn.addEventListener("click", closeArticle);
 
-    // Fechar ao clicar fora do cartão branco (no fundo desfocado)
     articleModal.addEventListener("click", (e) => {
         if (!whiteCard.contains(e.target)) {
             closeArticle();
         }
     });
 
-    // Fechar ao pressionar ESC
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && !articleModal.classList.contains("hidden")) {
             closeArticle();
@@ -204,7 +258,9 @@ document.addEventListener("DOMContentLoaded", () => {
             filtered.sort((a, b) => b.timestamp - a.timestamp);
         }
 
-        renderCards(filtered);
+        currentFilteredItems = filtered;
+        currentPage = 1;
+        renderCurrentPage();
     }
 
     searchInput.addEventListener("input", filterAndSort);
@@ -221,5 +277,5 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Link da publicação copiado!");
     });
 
-    renderCards(PUBLICACOES_DATA);
+    renderCurrentPage();
 });
