@@ -366,7 +366,6 @@ a {
     padding-bottom: 24px;
 }
 
-/* Efeito escalonado nas colunas pares (2ª e 4ª coluna) no desktop */
 @media (min-width: 961px) {
     .areas-grid .area-card:nth-child(even) {
         transform: translateY(22px);
@@ -1260,7 +1259,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1.2fr;
     gap: 30px;
-    padding-bottom: 45px;
+    padding-bottom: 40px;
 }
 
 .footer-links {
@@ -1281,13 +1280,34 @@ a {
 }
 
 .footer-middle {
-    border-top: 1px solid #262626;
-    padding: 25px 0 35px 0;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr auto;
+    padding: 15px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    color: #777777;
+    gap: 35px;
+    color: #888888;
     font-size: 0.72rem;
+}
+
+.footer-middle-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-divider-line {
+    width: 100%;
+    height: 3px;
+    background-color: #666666;
+    margin-bottom: 18px;
+}
+
+.footer-legal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-right: 45px;
 }
 
 .privacy-link {
@@ -1299,10 +1319,23 @@ a {
     color: var(--white);
 }
 
-.signature-mark {
-    font-style: italic;
-    color: #666666;
-    font-size: 0.75rem;
+.agency-logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.agency-logo {
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.agency-logo-link:hover .agency-logo {
+    opacity: 1;
 }
 
 .footer-bottom {
@@ -1429,10 +1462,26 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .footer-top,
-    .footer-middle {
+    .footer-top {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .footer-middle-left {
+        width: 100%;
+    }
+
+    .footer-legal-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-right: 0;
     }
 
     .hero,
