@@ -325,7 +325,7 @@ a {
 }
 
 /* ==========================================
-   6. HOME: ÁREAS DE ATUAÇÃO
+   6. ÁREAS DE ATUAÇÃO (GRADE E HOVER PADRÃO)
    ========================================== */
 .areas-section {
     padding: 20px 0 65px 0;
@@ -395,6 +395,7 @@ a {
     transition: color 0.3s ease;
 }
 
+/* HOVER IDÊNTICO AO INDEX: fundo vermelho, texto branco e a barrinha vertical PRETA */
 .area-card:hover {
     background-color: var(--primary-red);
 }
@@ -414,22 +415,97 @@ a {
     padding-left: 160px;
 }
 
-.area-detail {
-    margin-top: 25px;
-    padding: 35px;
-    background-color: var(--beige-light);
-    border-left: 6px solid var(--primary-red);
+/* ==========================================
+   PÁGINA DEDICADA: DETALHE DE ÁREAS (IMAGEM 2)
+   ========================================== */
+.areas-page-main {
+    padding: 65px 0 95px 0;
 }
 
-.btn-back {
+.area-detail-page-section {
+    animation: fadeInArea 0.3s ease-in-out;
+}
+
+@keyframes fadeInArea {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.area-detail-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: flex-start;
+}
+
+.area-detail-left .area-detail-heading {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--black);
+    margin-bottom: 25px;
+    line-height: 1.25;
+}
+
+.area-detail-body p {
+    font-size: 0.94rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+}
+
+.area-detail-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-back-areas {
     background: none;
     border: none;
     color: var(--primary-red);
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-family: var(--font-main);
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
     cursor: pointer;
-    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-back-areas:hover {
+    opacity: 0.75;
+}
+
+.back-red-box {
+    background-color: var(--primary-red);
+    color: var(--white);
+    width: 17px;
+    height: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+}
+
+.area-detail-highlight {
+    color: var(--primary-red);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: 0.2px;
 }
 
 /* ==========================================
@@ -826,7 +902,7 @@ a {
 }
 
 /* ==========================================
-   MODAL CENTRALIZADO COM FUNDO DESFOCADO
+   MODAL DE PUBLICAÇÕES
    ========================================== */
 .pub-article-modal {
     position: fixed;
@@ -841,10 +917,6 @@ a {
     align-items: flex-start;
     padding: 45px 24px 65px 24px;
     animation: modalFadeIn 0.25s ease;
-}
-
-.pub-article-modal.hidden {
-    display: none !important;
 }
 
 @keyframes modalFadeIn {
@@ -969,10 +1041,6 @@ a {
     align-items: center;
 }
 
-.share-icons.hidden {
-    display: none;
-}
-
 .share-icons a,
 .share-icons button {
     background: none;
@@ -1085,9 +1153,10 @@ a {
     .partner-grid,
     .partner-grid.reverse-layout,
     .office-columns,
-    .pub-intro-grid {
+    .pub-intro-grid,
+    .area-detail-columns {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
     }
 
     .partner-grid.reverse-layout .partner-photo-col {
@@ -1173,5 +1242,67 @@ a {
 
     .pub-search-box {
         width: 100%;
+    }
+}
+
+/* BANNER LIMITADO AO CONTAINER (PADRÃO INDEX) */
+.page-banner-wrapper {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.page-banner {
+    position: relative;
+    width: 100%;
+    height: 420px; /* Altura proporcional e equilibrada */
+    overflow: hidden;
+    background-color: #d9cfc1;
+}
+
+.page-banner-bg,
+.page-banner-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.page-banner-bg img {
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Caixa vermelha com o título alinhada na lateral */
+.page-banner-box {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    max-width: 520px;
+    padding: 28px 45px 28px 50px;
+    background-color: var(--primary-red);
+    color: var(--white);
+    z-index: 5;
+}
+
+.page-banner-box h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Ajustes para telas menores / celular */
+@media (max-width: 768px) {
+    .page-banner {
+        height: 320px;
+    }
+
+    .page-banner-box {
+        bottom: 20px;
+        max-width: 90%;
+        padding: 18px 24px;
+    }
+
+    .page-banner-box h1 {
+        font-size: 1.4rem;
     }
 }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de Atuação - Rodrigues Mac Dowell Gasparian</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-bars">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="logo-text">
+                    <span>RODRIGUES</span>
+                    <span>MAC DOWELL</span>
+                    <span>GASPARIAN</span>
+                </div>
+            </a>
+
+            <div class="header-actions">
+                <button class="search-btn" id="search-btn" aria-label="Pesquisar">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- MENU SUSPENSO FLUTUANTE -->
+            <aside class="side-drawer" id="side-drawer">
+                <div class="drawer-header">
+                    <button class="drawer-close" id="drawer-close" aria-label="Fechar Menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">HOME</a></li>
+                        <li><a href="o-escritorio.html" class="nav-link">O ESCRITÓRIO</a></li>
+                        <li><a href="area-de-atuacao.html" class="nav-link active">ÁREA DE ATUAÇÃO</a></li>
+                        <li><a href="quem-somos.html" class="nav-link">QUEM SOMOS</a></li>
+                        <li><a href="publicacoes.html" class="nav-link">PUBLICAÇÕES E NOTÍCIAS</a></li>
+                        <li><a href="index.html#contato" class="nav-link">CONTATO</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <!-- BANNER INTERNO -->
+ <section class="page-banner-wrapper">
+    <div class="container">
+        <div class="page-banner">
+            <div class="page-banner-bg">
+                <img src="./img/banner-areas.jpg" alt="Áreas de Atuação - RMG Advogados">
+            </div>
+            <div class="page-banner-box">
+                <h1>ÁREAS DE ATUAÇÃO</h1>
+            </div>
+        </div>
+    </div>
+</section>  
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="areas-page-main">
+
+        <!-- VISÃO 1: GRADE COM OS 20 CARDS (IMAGEM 1) -->
+        <section id="areas-grid-view" class="areas-page-grid-section">
+            <div class="container">
+                <div class="areas-grid" id="areas-page-grid"></div>
+            </div>
+        </section>
+
+        <!-- VISÃO 2: DETALHE DA ÁREA SELECIONADA (IMAGEM 2) -->
+        <section id="area-detail-view" class="area-detail-page-section hidden">
+            <div class="container">
+                <div class="area-detail-columns">
+                    <!-- Coluna da Esquerda: Título + Parágrafos -->
+                    <div class="area-detail-left">
+                        <h2 id="area-detail-title" class="area-detail-heading">CONTENCIOSO E ARBITRAGEM</h2>
+                        <div id="area-detail-desc" class="area-detail-body"></div>
+                    </div>
+
+                    <!-- Coluna da Direita: Botão Voltar + Destaque Vermelho -->
+                    <div class="area-detail-right">
+                        <button type="button" id="area-back-btn" class="btn-back-areas">
+                            <span class="back-red-box"><i class="fas fa-chevron-left"></i></span>
+                            DE VOLTA ÀS ÁREAS DE ATUAÇÃO
+                        </button>
+                        <p id="area-detail-highlight" class="area-detail-highlight"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-links">
+                    <a href="index.html">HOME</a>
+                    <a href="o-escritorio.html">O ESCRITÓRIO</a>
+                    <a href="area-de-atuacao.html">ÁREA DE ATUAÇÃO</a>
+                </div>
+                <div class="footer-col footer-links">
+                    <a href="quem-somos.html">QUEM SOMOS</a>
+                    <a href="publicacoes.html">PUBLICAÇÕES E NOTÍCIAS</a>
+                    <a href="index.html#contato">CONTATO</a>
+                </div>
+                <div class="footer-col footer-address">
+                    <p>+55 (11) 2344-6672</p>
+                    <p>mail@rmgadvogados.com.br</p>
+                    <p>Av. Brig. Faria Lima, nº 2894, 12º andar</p>
+                    <p>Jardim Paulistano - São Paulo/SP</p>
+                    <p>CEP: 01451-000</p>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <span class="copyright">Rodrigues Mac Dowell Gasparian todos os direitos reservados</span>
+                <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
+                <span class="signature-mark">UnixEdge</span>
+            </div>
+
+            <div class="footer-bottom">
+                <a href="index.html" class="logo footer-logo">
+                    <div class="logo-bars">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="logo-text white-text">
+                        <span>RODRIGUES</span>
+                        <span>MAC DOWELL</span>
+                        <span>GASPARIAN</span>
+                    </div>
+                </a>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const sideDrawer = document.getElementById('side-drawer');
+
+        if (menuToggle && sideDrawer) {
+            menuToggle.addEventListener('click', () => sideDrawer.classList.toggle('open'));
+        }
+        if (drawerClose && sideDrawer) {
+            drawerClose.addEventListener('click', () => sideDrawer.classList.remove('open'));
+        }
+    </script>
+    <script src="./js/areas.js"></script>
+</body>
+</html>

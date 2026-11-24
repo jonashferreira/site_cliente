@@ -1,0 +1,129 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/Dark Matter/_REVOADA_ESTUDIO/01_TRABALHOS/RMG_ADVOGADOS_RBMDFG/01_FINAL/site/261028_RMG_site_desktop Folder/Document fonts/AdobeFnt23.lst
+FileLength:3042
+FileModTime:814915956
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSans-Bold
+FamilyName:Josefin Sans
+StyleName:Bold
+MenuName:Josefin Sans
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Josefin Sans Bold
+WritingScript:Roman
+OutlineFileName:/Volumes/Dark Matter/_REVOADA_ESTUDIO/01_TRABALHOS/RMG_ADVOGADOS_RBMDFG/01_FINAL/site/261028_RMG_site_desktop Folder/Document fonts/JosefinSans-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:59756
+FileModTime:778723714
+NameArray:0,Win,1,Josefin Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSans-Light
+FamilyName:Josefin Sans
+StyleName:Light
+MenuName:Josefin Sans Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Josefin Sans Light
+WritingScript:Roman
+OutlineFileName:/Volumes/Dark Matter/_REVOADA_ESTUDIO/01_TRABALHOS/RMG_ADVOGADOS_RBMDFG/01_FINAL/site/261028_RMG_site_desktop Folder/Document fonts/JosefinSans-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:59864
+FileModTime:778723714
+NameArray:0,Win,1,Josefin Sans Light
+NameArray:0,Win,16,Josefin Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSans-Medium
+FamilyName:Josefin Sans
+StyleName:Medium
+MenuName:Josefin Sans Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Josefin Sans Medium
+WritingScript:Roman
+OutlineFileName:/Volumes/Dark Matter/_REVOADA_ESTUDIO/01_TRABALHOS/RMG_ADVOGADOS_RBMDFG/01_FINAL/site/261028_RMG_site_desktop Folder/Document fonts/JosefinSans-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:59900
+FileModTime:778723714
+NameArray:0,Win,1,Josefin Sans Medium
+NameArray:0,Win,16,Josefin Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSans-Regular
+FamilyName:Josefin Sans
+StyleName:Regular
+MenuName:Josefin Sans
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Josefin Sans Regular
+WritingScript:Roman
+OutlineFileName:/Volumes/Dark Matter/_REVOADA_ESTUDIO/01_TRABALHOS/RMG_ADVOGADOS_RBMDFG/01_FINAL/site/261028_RMG_site_desktop Folder/Document fonts/JosefinSans-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:59876
+FileModTime:778723714
+NameArray:0,Win,1,Josefin Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSans-SemiBold
+FamilyName:Josefin Sans
+StyleName:SemiBold
+MenuName:Josefin Sans SemiBold
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Josefin Sans SemiBold
+WritingScript:Roman
+OutlineFileName:/Volumes/Dark Matter/_REVOADA_ESTUDIO/01_TRABALHOS/RMG_ADVOGADOS_RBMDFG/01_FINAL/site/261028_RMG_site_desktop Folder/Document fonts/JosefinSans-SemiBold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:59892
+FileModTime:778723714
+NameArray:0,Win,1,Josefin Sans SemiBold
+NameArray:0,Win,16,Josefin Sans
+%EndFont
+

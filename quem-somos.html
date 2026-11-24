@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicações e Notícias - Rodrigues Mac Dowell Gasparian</title>
+    <title>Quem Somos - Rodrigues Mac Dowell Gasparian</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,8 +47,8 @@
                         <li><a href="index.html" class="nav-link">HOME</a></li>
                         <li><a href="o-escritorio.html" class="nav-link">O ESCRITÓRIO</a></li>
                         <li><a href="index.html#areas" class="nav-link">ÁREA DE ATUAÇÃO</a></li>
-                        <li><a href="quem-somos.html" class="nav-link">QUEM SOMOS</a></li>
-                        <li><a href="publicacoes.html" class="nav-link active">PUBLICAÇÕES E NOTÍCIAS</a></li>
+                        <li><a href="quem-somos.html" class="nav-link active">QUEM SOMOS</a></li>
+                        <li><a href="publicacoes.html" class="nav-link">PUBLICAÇÕES E NOTÍCIAS</a></li>
                         <li><a href="index.html#contato" class="nav-link">CONTATO</a></li>
                     </ul>
                 </nav>
@@ -60,88 +60,140 @@
         </div>
     </header>
 
-    <!-- VISUALIZAÇÃO PRINCIPAL: LISTAGEM DE PUBLICAÇÕES E NOTÍCIAS -->
-    <main id="pub-list-view" class="pub-main">
-        
-        <!-- CABEÇALHO DA PÁGINA (FAIXA VERMELHA + TEXTOS) -->
-        <section class="pub-hero">
-            <div class="pub-red-header">
-                <div class="container">
-                    <h1>PUBLICAÇÕES E NOTÍCIAS</h1>
-                </div>
-            </div>
+    <!-- BANNER INTERNO -->
+    <section class="page-banner">
+        <div class="page-banner-bg">
+            <img src="./img/banner-quem-somos.jpg" alt="Sócios Rodrigues Mac Dowell Gasparian">
+        </div>
+        <div class="page-banner-box">
+            <h1>QUEM SOMOS</h1>
+        </div>
+    </section>
 
-            <div class="container pub-intro-grid">
-                <div class="pub-intro-left">
-                    <p>Artigos, análises e notícias sobre temas relevantes para o Direito, os negócios e os setores em que atuamos.</p>
-                </div>
-                <div class="pub-intro-right">
-                    <p>Um olhar atento às transformações que impactam empresas, instituições e a sociedade.</p>
-                </div>
-            </div>
-        </section>
+    <!-- LISTA DE SÓCIOS -->
+    <main class="partners-list">
 
-        <!-- BARRA DE PESQUISA E ORDENAÇÃO -->
-        <section class="pub-controls-section">
-            <div class="container pub-controls-bar">
-                <div class="pub-search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="pub-search-input" placeholder="buscar publicação...">
+        <!-- SÓCIO 1: SAMUEL MAC DOWELL DE FIGUEIREDO -->
+        <section class="partner-row bg-white">
+            <div class="container partner-grid">
+                <div class="partner-info">
+                    <h2>SAMUEL MAC DOWELL<br>DE FIGUEIREDO</h2>
+                    <p>Graduado em Direito pela Pontifícia Universidade Católica de São Paulo (PUC-SP), com longa trajetória na advocacia contenciosa e consultiva, especialmente em temas constitucionais, liberdades públicas, direitos humanos e responsabilidade civil.</p>
+                    <p>Participou de casos históricos na defesa da liberdade de expressão, da imprensa e da memória democrática no Brasil, consolidando uma atuação pautada pelo rigor técnico e pelo compromisso ético.</p>
+
+                    <div class="partner-contact">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="partner-linkedin" aria-label="LinkedIn Samuel Mac Dowell de Figueiredo">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:samuel@rmgadvogados.com.br" class="partner-email">samuel@rmgadvogados.com.br</a>
+                    </div>
                 </div>
 
-                <div class="pub-sort-box">
-                    <select id="pub-sort-select" aria-label="Ordenar publicações">
-                        <option value="recent">ordenar</option>
-                        <option value="recent">Mais recentes</option>
-                        <option value="oldest">Mais antigos</option>
-                    </select>
+                <div class="partner-photo-col">
+                    <div class="partner-photo-card">
+                        <img src="./img/samuel.jpg" alt="Samuel Mac Dowell de Figueiredo">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- GRID DE CARDS DE PUBLICAÇÕES -->
-        <section class="pub-grid-section">
-            <div class="container">
-                <div class="pub-grid" id="pub-grid"></div>
+        <!-- SÓCIA 2: TAÍS BORJA GASPARIAN -->
+        <section class="partner-row bg-beige">
+            <div class="container partner-grid reverse-layout">
+                <div class="partner-photo-col">
+                    <div class="partner-photo-card">
+                        <img src="./img/tais.jpg" alt="Taís Borja Gasparian">
+                    </div>
+                </div>
+
+                <div class="partner-info">
+                    <h2>TAÍS BORJA GASPARIAN</h2>
+                    <p>Graduada em Direito e em Letras pela Universidade de São Paulo (USP), com ampla experiência na assessoria e no contencioso estratégico envolvendo liberdade de expressão, imprensa, comunicação, publicidade, direitos da personalidade e propriedade intelectual.</p>
+                    <p>É fundadora do Instituto Tornavoz e integra conselhos e instituições voltadas à defesa das liberdades civis e do Estado Democrático de Direito.</p>
+
+                    <div class="partner-contact">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="partner-linkedin" aria-label="LinkedIn Taís Borja Gasparian">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:tais@rmgadvogados.com.br" class="partner-email">tais@rmgadvogados.com.br</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SÓCIA 3: VIRGINIA MARIA DE ALMEIDA -->
+        <section class="partner-row bg-white">
+            <div class="container partner-grid">
+                <div class="partner-info">
+                    <h2>VIRGINIA MARIA<br>DE ALMEIDA</h2>
+                    <p>Graduada em Direito pela Pontifícia Universidade Católica de São Paulo (PUC-SP), com atuação dedicada ao Direito Civil, Empresarial, Contratos e Resolução de Conflitos.</p>
+                    <p>Assessoria jurídica preventiva e contenciosa para empresas, editoras, produtoras e instituições, com foco na estruturação de negócios e na segurança jurídica das operações.</p>
+
+                    <div class="partner-contact">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="partner-linkedin" aria-label="LinkedIn Virginia Maria de Almeida">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:virginia@rmgadvogados.com.br" class="partner-email">virginia@rmgadvogados.com.br</a>
+                    </div>
+                </div>
+
+                <div class="partner-photo-col">
+                    <div class="partner-photo-card">
+                        <img src="./img/virginia.jpg" alt="Virginia Maria de Almeida">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SÓCIA 4: MÔNICA FILGUEIRAS DA SILVA GALVÃO -->
+        <section class="partner-row bg-beige">
+            <div class="container partner-grid reverse-layout">
+                <div class="partner-photo-col">
+                    <div class="partner-photo-card">
+                        <img src="./img/monica.jpg" alt="Mônica Filgueiras da Silva Galvão">
+                    </div>
+                </div>
+
+                <div class="partner-info">
+                    <h2>MÔNICA FILGUEIRAS<br>DA SILVA GALVÃO</h2>
+                    <p>Graduada em Direito, com especialização em Direito Digital, Proteção de Dados, Propriedade Intelectual e Direito do Entretenimento.</p>
+                    <p>Atua na consultoria e no contencioso relacionados a plataformas digitais, direitos autorais, audiovisual, publicidade e governança corporativa.</p>
+
+                    <div class="partner-contact">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="partner-linkedin" aria-label="LinkedIn Mônica Filgueiras da Silva Galvão">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:monica@rmgadvogados.com.br" class="partner-email">monica@rmgadvogados.com.br</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SÓCIA 5: CAROLINA DE ALMEIDA -->
+        <section class="partner-row bg-white">
+            <div class="container partner-grid">
+                <div class="partner-info">
+                    <h2>CAROLINA DE ALMEIDA</h2>
+                    <p>Graduada em Direito, com atuação concentrada em Contencioso Cível Estratégico, Direito do Consumidor, Responsabilidade Civil e Direito da Mídia.</p>
+                    <p>Conduz demandas complexas nos tribunais estaduais e superiores, oferecendo atendimento próximo e soluções sob medida para cada cliente.</p>
+
+                    <div class="partner-contact">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="partner-linkedin" aria-label="LinkedIn Carolina de Almeida">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:carolina@rmgadvogados.com.br" class="partner-email">carolina@rmgadvogados.com.br</a>
+                    </div>
+                </div>
+
+                <div class="partner-photo-col">
+                    <div class="partner-photo-card">
+                        <img src="./img/carolina.jpg" alt="Carolina de Almeida">
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
-
-    <!-- MODAL CENTRALIZADO COM FUNDO DESFOCADO (LEITURA DO ARTIGO) -->
-    <div id="pub-article-view" class="pub-article-modal hidden" role="dialog" aria-modal="true" aria-labelledby="art-title">
-        <div class="art-white-card" id="art-white-card">
-            <!-- Topo do Cartão: Data à esquerda + Botão X preto à direita -->
-            <div class="art-card-header">
-                <span id="art-date" class="art-date">31.08.26</span>
-                <button id="pub-back-btn" class="btn-close-article" aria-label="Fechar notícia">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <!-- Conteúdo Recuado do Artigo -->
-            <div class="art-card-content">
-                <h1 id="art-title" class="art-title"></h1>
-
-                <div id="art-body" class="art-body"></div>
-
-                <div id="art-tags" class="art-tags"></div>
-
-                <!-- Botão Preto "compartilhar" + Opções Expansíveis -->
-                <div class="art-share-wrapper">
-                    <button type="button" id="toggle-share-btn" class="btn-share-black">
-                        compartilhar
-                    </button>
-
-                    <div id="share-options" class="share-icons hidden">
-                        <a href="#" id="share-linkedin" target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" id="share-whatsapp" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <button type="button" id="share-copy" aria-label="Copiar link"><i class="fas fa-link"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- RODAPÉ -->
     <footer class="footer">
@@ -193,6 +245,5 @@
     </footer>
 
     <script src="./js/script.js"></script>
-    <script src="./js/publicacoes.js"></script>
 </body>
 </html>
