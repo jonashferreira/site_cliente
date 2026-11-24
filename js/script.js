@@ -103,17 +103,49 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Formulário de Contato (contato.html)
+    // Formulário de Contato (contato.html) - Envio Nativo PHP (Locaweb)
     const contactForm = document.getElementById("contact-form");
     const contactFeedback = document.getElementById("contact-feedback");
 
     if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
+        contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
+
+            const submitBtn = contactForm.querySelector(".btn-submit-black");
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = "enviando...";
+            submitBtn.disabled = true;
+
             if (contactFeedback) {
-                contactFeedback.classList.remove("hidden");
+                contactFeedback.classList.add("hidden");
             }
-            contactForm.reset();
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch("enviar.php", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (contactFeedback) {
+                    contactFeedback.textContent = result.message;
+                    contactFeedback.classList.remove("hidden");
+                }
+
+                if (response.ok && result.status === "success") {
+                    contactForm.reset();
+                }
+            } catch (error) {
+                if (contactFeedback) {
+                    contactFeedback.textContent = "Não foi possível conectar ao servidor. Tente novamente em instantes.";
+                    contactFeedback.classList.remove("hidden");
+                }
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     }
 });

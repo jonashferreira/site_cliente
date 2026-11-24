@@ -325,7 +325,7 @@ a {
 }
 
 /* ==========================================
-   6. ÁREAS DE ATUAÇÃO (GRADE E HOVER PADRÃO)
+   6. ÁREAS DE ATUAÇÃO (GRADE ESCALONADA E HOVER)
    ========================================== */
 .areas-section {
     padding: 20px 0 65px 0;
@@ -362,7 +362,15 @@ a {
 .areas-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    gap: 24px 22px;
+    padding-bottom: 24px;
+}
+
+/* Efeito escalonado nas colunas pares (2ª e 4ª coluna) no desktop */
+@media (min-width: 961px) {
+    .areas-grid .area-card:nth-child(even) {
+        transform: translateY(22px);
+    }
 }
 
 .area-card {
@@ -373,7 +381,7 @@ a {
     display: flex;
     align-items: flex-end;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 0 100%);
 }
 
@@ -1094,203 +1102,7 @@ a {
 }
 
 /* ==========================================
-   12. RODAPÉ
-   ========================================== */
-.footer {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 60px 0 45px 0;
-    font-size: 0.78rem;
-}
-
-.footer-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr;
-    gap: 30px;
-    padding-bottom: 45px;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.footer-links a:hover {
-    color: var(--primary-red);
-}
-
-.footer-address {
-    color: #cccccc;
-    line-height: 1.75;
-}
-
-.footer-middle {
-    border-top: 1px solid #262626;
-    padding: 25px 0 35px 0;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr auto;
-    align-items: center;
-    color: #777777;
-    font-size: 0.72rem;
-}
-
-.privacy-link {
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.privacy-link:hover {
-    color: var(--white);
-}
-
-.signature-mark {
-    font-style: italic;
-    color: #666666;
-    font-size: 0.75rem;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 14px;
-}
-
-.footer-socials a {
-    color: var(--white);
-    font-size: 1.35rem;
-    transition: color 0.2s ease;
-}
-
-.footer-socials a:hover {
-    color: var(--primary-red);
-}
-
-/* ==========================================
-   13. RESPONSIVIDADE GLOBAL
-   ========================================== */
-@media (max-width: 960px) {
-    .areas-grid,
-    .pub-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .areas-footer {
-        padding-left: 0;
-    }
-
-    .quem-somos-grid,
-    .partner-grid,
-    .partner-grid.reverse-layout,
-    .office-columns,
-    .pub-intro-grid,
-    .area-detail-columns {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .partner-grid.reverse-layout .partner-photo-col {
-        order: -1;
-    }
-
-    .partner-photo-card {
-        max-width: 100%;
-    }
-
-    .partner-photo-card img {
-        height: 360px;
-    }
-
-    .office-content-indent {
-        padding-left: 0;
-    }
-
-    .office-marco-wrapper {
-        background-color: var(--beige-light);
-    }
-
-    .office-marco-box {
-        padding: 45px 0;
-    }
-
-    .page-banner,
-    .page-banner-bg img {
-        height: 360px;
-    }
-
-    .page-banner-box {
-        bottom: 25px;
-        max-width: 90%;
-        padding: 22px 30px;
-    }
-
-    .page-banner-box h1 {
-        font-size: 1.2rem;
-    }
-
-    .pub-red-header::before {
-        width: 88%;
-    }
-
-    .hero-box {
-        padding: 24px 30px;
-        max-width: 90%;
-    }
-
-    .pub-article-modal {
-        padding: 20px 16px 40px 16px;
-    }
-
-    .art-white-card {
-        padding: 28px 22px 45px 22px;
-    }
-
-    .art-card-content {
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .areas-grid,
-    .pub-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-top,
-    .footer-middle {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .hero,
-    .slide-img,
-    .page-banner,
-    .page-banner-bg img {
-        height: 320px;
-    }
-
-    .hero-box h1 {
-        font-size: 1rem;
-    }
-
-    .pub-controls-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .pub-search-box {
-        width: 100%;
-    }
-}
-/* ==========================================
-   14. PÁGINA: CONTATO
+   12. PÁGINA: CONTATO
    ========================================== */
 .contact-banner-wrapper {
     padding-bottom: 0;
@@ -1349,7 +1161,6 @@ a {
     color: var(--primary-red);
 }
 
-/* Formulário de Contato */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -1435,7 +1246,173 @@ a {
     color: var(--primary-red);
 }
 
-@media (max-width: 768px) {
+/* ==========================================
+   13. RODAPÉ
+   ========================================== */
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 60px 0 45px 0;
+    font-size: 0.78rem;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 30px;
+    padding-bottom: 45px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.footer-links a:hover {
+    color: var(--primary-red);
+}
+
+.footer-address {
+    color: #cccccc;
+    line-height: 1.75;
+}
+
+.footer-middle {
+    border-top: 1px solid #262626;
+    padding: 25px 0 35px 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr auto;
+    align-items: center;
+    color: #777777;
+    font-size: 0.72rem;
+}
+
+.privacy-link {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.privacy-link:hover {
+    color: var(--white);
+}
+
+.signature-mark {
+    font-style: italic;
+    color: #666666;
+    font-size: 0.75rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-socials a {
+    color: var(--white);
+    font-size: 1.35rem;
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--primary-red);
+}
+
+/* ==========================================
+   14. RESPONSIVIDADE GLOBAL
+   ========================================== */
+@media (max-width: 960px) {
+    .areas-grid,
+    .pub-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .areas-grid {
+        padding-bottom: 0;
+    }
+
+    .areas-footer {
+        padding-left: 0;
+    }
+
+    .quem-somos-grid,
+    .partner-grid,
+    .partner-grid.reverse-layout,
+    .office-columns,
+    .pub-intro-grid,
+    .area-detail-columns {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .partner-grid.reverse-layout .partner-photo-col {
+        order: -1;
+    }
+
+    .partner-photo-card {
+        max-width: 100%;
+    }
+
+    .partner-photo-card img {
+        height: 360px;
+    }
+
+    .office-content-indent {
+        padding-left: 0;
+    }
+
+    .office-marco-wrapper {
+        background-color: var(--beige-light);
+    }
+
+    .office-marco-box {
+        padding: 45px 0;
+    }
+
+    .page-banner,
+    .page-banner-bg img {
+        height: 360px;
+    }
+
+    .page-banner-box {
+        bottom: 25px;
+        max-width: 90%;
+        padding: 22px 30px;
+    }
+
+    .page-banner-box h1 {
+        font-size: 1.2rem;
+    }
+
+    .pub-red-header::before {
+        width: 88%;
+    }
+
+    .hero-box {
+        padding: 24px 30px;
+        max-width: 90%;
+    }
+
+    .pub-article-modal {
+        padding: 20px 16px 40px 16px;
+    }
+
+    .art-white-card {
+        padding: 28px 22px 45px 22px;
+    }
+
+    .art-card-content {
+        padding-left: 0;
+    }
+
     .contact-page-section {
         padding: 45px 0 65px 0;
     }
@@ -1443,5 +1420,38 @@ a {
     .contact-info-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .areas-grid,
+    .pub-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top,
+    .footer-middle {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero,
+    .slide-img,
+    .page-banner,
+    .page-banner-bg img {
+        height: 320px;
+    }
+
+    .hero-box h1 {
+        font-size: 1rem;
+    }
+
+    .pub-controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pub-search-box {
+        width: 100%;
     }
 }
