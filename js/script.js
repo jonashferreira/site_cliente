@@ -38,7 +38,7 @@ function resetSlideTimer() {
 }
 
 // ==========================================
-// 2. INICIALIZAÇÃO DO MENU, BUSCA E SLIDER
+// 2. INICIALIZAÇÃO DO MENU, BUSCA, SLIDER E CONTATO
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     // Iniciar Slider (caso esteja na index.html)
@@ -100,6 +100,20 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 window.location.href = "publicacoes.html";
             }
+        });
+    }
+
+    // Formulário de Contato (contato.html)
+    const contactForm = document.getElementById("contact-form");
+    const contactFeedback = document.getElementById("contact-feedback");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (contactFeedback) {
+                contactFeedback.classList.remove("hidden");
+            }
+            contactForm.reset();
         });
     }
 });

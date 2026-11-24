@@ -60,41 +60,38 @@
         </div>
     </header>
 
-    <!-- BANNER INTERNO -->
- <section class="page-banner-wrapper">
-    <div class="container">
-        <div class="page-banner">
-            <div class="page-banner-bg">
-                <img src="./img/banner-areas.jpg" alt="Áreas de Atuação - RMG Advogados">
-            </div>
-            <div class="page-banner-box">
-                <h1>ÁREAS DE ATUAÇÃO</h1>
+    <!-- BANNER INTERNO CENTRALIZADO -->
+    <section class="page-banner-wrapper">
+        <div class="container">
+            <div class="page-banner">
+                <div class="page-banner-bg">
+                    <img src="./img/banner-areas.jpg" alt="Áreas de Atuação - Sala de Reunião RMG Advogados">
+                </div>
+                <div class="page-banner-box">
+                    <h1>ÁREAS DE ATUAÇÃO</h1>
+                </div>
             </div>
         </div>
-    </div>
-</section>  
+    </section>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="areas-page-main">
 
-        <!-- VISÃO 1: GRADE COM OS 20 CARDS (IMAGEM 1) -->
+        <!-- VISÃO 1: GRID COM OS 20 CARDS -->
         <section id="areas-grid-view" class="areas-page-grid-section">
             <div class="container">
                 <div class="areas-grid" id="areas-page-grid"></div>
             </div>
         </section>
 
-        <!-- VISÃO 2: DETALHE DA ÁREA SELECIONADA (IMAGEM 2) -->
+        <!-- VISÃO 2: DETALHE DA ÁREA SELECIONADA -->
         <section id="area-detail-view" class="area-detail-page-section hidden">
             <div class="container">
                 <div class="area-detail-columns">
-                    <!-- Coluna da Esquerda: Título + Parágrafos -->
                     <div class="area-detail-left">
                         <h2 id="area-detail-title" class="area-detail-heading">CONTENCIOSO E ARBITRAGEM</h2>
-                        <div id="area-detail-desc" class="area-detail-body"></div>
+                        <div class="area-detail-body" id="area-detail-desc"></div>
                     </div>
-
-                    <!-- Coluna da Direita: Botão Voltar + Destaque Vermelho -->
                     <div class="area-detail-right">
                         <button type="button" id="area-back-btn" class="btn-back-areas">
                             <span class="back-red-box"><i class="fas fa-chevron-left"></i></span>
@@ -157,18 +154,7 @@
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const drawerClose = document.getElementById('drawer-close');
-        const sideDrawer = document.getElementById('side-drawer');
-
-        if (menuToggle && sideDrawer) {
-            menuToggle.addEventListener('click', () => sideDrawer.classList.toggle('open'));
-        }
-        if (drawerClose && sideDrawer) {
-            drawerClose.addEventListener('click', () => sideDrawer.classList.remove('open'));
-        }
-    </script>
+    <script src="./js/script.js"></script>
     <script src="./js/areas.js"></script>
 </body>
 </html>
